@@ -15,10 +15,6 @@ const paginateArray = (dataEntries, settings) => {
   const entriesPerPage = settings.entriesOnPage;
   const dataCount = dataEntries.length;
   let endIdx = 0;
-  console.log(startIdx);
-  console.log(entriesPerPage);
-  console.log(dataCount);
-
 
   if (startIdx+entriesPerPage>=dataCount) { 
         endIdx=dataCount;
@@ -26,7 +22,7 @@ const paginateArray = (dataEntries, settings) => {
   else {
       endIdx=startIdx+entriesPerPage
   }
-  console.log(endIdx);
+  
   for (let i = startIdx; i<endIdx; i++) {
       entriesOnSelectedPage.push(dataEntries[i]);
   }
