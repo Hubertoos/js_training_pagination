@@ -1,17 +1,14 @@
-import x from './example';
-
-
 function main() {
-    // actualPageIdx to index wybranej strony (indexujemy od 0)
+// actualPageIdx to index wybranej strony (indexujemy od 0)
 // entriesOnPage to maksymalna zwracana ilość elementów z dataEntries dla wybranej strony
-
 // przykładowe dane
+
 const data = [1,2,3,4,5,6];
-const settings = { actualPageIdx: 1, entriesOnPage: 3 }; 
+const settings = { actualPageIdx: 0, entriesOnPage: 5 }; 
 
 const paginateArray = (dataEntries, settings) => {
-  let entriesOnSelectedPage = [];
-  const startIdx = settings.actualPageIdx+1;
+  const entriesOnSelectedPage = [];
+  const startIdx = settings.actualPageIdx;
   const entriesPerPage = settings.entriesOnPage;
   const dataCount = dataEntries.length;
   let endIdx = 0;
